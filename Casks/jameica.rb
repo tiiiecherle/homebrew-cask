@@ -5,6 +5,11 @@ cask "jameica" do
   url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64-#{version}.zip"
   name "Jameica"
   homepage "https://www.willuhn.de/products/jameica/"
+  
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "jameica.app"
 end
